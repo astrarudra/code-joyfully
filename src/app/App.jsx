@@ -1,15 +1,23 @@
-import { useStore } from '../appStore/store'
+import { AppNavbar } from './appComponents/ConnectedElements';
+import PageRouter from './PageRouter';
 import './App.css'
+import { BrowserRouter } from 'react-router-dom';
+
+
 
 function App() {
-  const [version, setState] = useStore(o => [o.version, o.setState])
   return (
-    <>
-      <div onClick={() => setState({version: "yay, it works"})}>
-        Zustand not working
-        Hello World - {version}
-      </div>
-    </>
+    <BrowserRouter>
+        <AppNavbar />
+        <PageRouter />
+        {/* Zustand not working
+        Hello World - {version} */}
+        {/* <Tooltip content="Tooltip content">
+          <Button onClick={() => setState({version: "yay, it works"})}>
+            Toggle Theme
+          </Button>
+        </Tooltip> */}
+      </BrowserRouter>
   )
 }
 

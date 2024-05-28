@@ -1,5 +1,5 @@
-import { GIST, GIT, LOCALSTORE } from "../constants";
-import Oxy from "../oxy"
+import { GIST, GIT, LOCALSTORE } from "../../constants";
+import Oxy from "../../oxy"
 import { loadStateBulk, saveStateBulk } from "./localStorage";
 import { useStore } from "./store";
 const { setState, setData } = useStore.getState()

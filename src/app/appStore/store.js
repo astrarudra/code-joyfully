@@ -10,9 +10,12 @@ export const useStore = createWithEqualityFn(immer((set) => ({
     data: {
         privacy: null,
     },
-    // pages: {
-    //   home: { component: 'Home', path: '/home', Icon: (p) => <HomeIcon {...p}/> },
-    // },
+    pages: {
+      home: { component: 'Home', name: 'Home', path: '/home', icon: 'test' },
+      courses: { component: 'Courses', name: 'Courses', path: '/course', icon: 'test' },
+      blog: { component: 'Blog', name: 'Blog', path: '/blog', icon: 'test' },
+      about: { component: 'About', name: 'About', path: '/about', icon: 'test' },
+    },
     setPageNames: (names) => set((s) => {
         Object.keys(names).forEach((k) => {
             s.pages[k].name = names[k];
